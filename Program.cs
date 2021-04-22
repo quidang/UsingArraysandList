@@ -53,44 +53,66 @@ namespace ArrayList
             //        Console.WriteLine("This number has not been added!");
             //    }
 
-            Console.WriteLine("=======================================");
-            Console.WriteLine("Using Lists - Exercise Two");
+            // Console.WriteLine("=======================================");
+            // Console.WriteLine("Using Lists - Exercise Two");
 
-            List<int> myNumbers = new List<int>();
-			HashSet<int> uniqueNumbers = new HashSet<int>();
-            Dictionary<int, int> numberDict = new Dictionary<int, int>();
+            // List<int> myNumbers = new List<int>();
+			// HashSet<int> uniqueNumbers = new HashSet<int>();
+            // Dictionary<int, int> numberDictionary = new Dictionary<int, int>();
 
-			Console.WriteLine("Please enter five numbers");
-			for (int i = 1; i <= 5; i++)
-			{
-				int number = int.Parse(Console.ReadLine());
-				myNumbers.Add(number);
-				uniqueNumbers.Add(number);
-			}
+			// Console.WriteLine("Please enter 5 numbers!");
+			// for (int i = 1; i <= 5; i++)
+			// {
+			// 	int number = int.Parse(Console.ReadLine());
+			// 	myNumbers.Add(number);
+			// 	uniqueNumbers.Add(number);
+			// }
 
-            Console.WriteLine("Numbers");
-            foreach (int num in myNumbers)
-            {
-                if (uniqueNumbers.Contains(num))
-                {
-                    if (!numberDict.ContainsKey(num))
-                    {
-                        numberDict.Add(num, 1);
-                    }
-                    else
-                    {
-                        numberDict[num] = numberDict[num] + 1;
-                    }
-                }
-            }
-
-            foreach(KeyValuePair<int, int> kvp in numberDict)
-            {
-                Console.WriteLine("{0} repeats {1} times", kvp.Key, kvp.Value);
+            // Console.WriteLine("NUMBERS!");
+            // foreach (int numbers in myNumbers)
+            // {
+            //     if (uniqueNumbers.Contains(numbers))
+            //     {
+            //         if (!numberDictionary.ContainsKey(numbers))
+            //         {
+            //             numberDictionary.Add(numbers, 1);
+            //         }
+            //         else
+            //         {
+            //             numberDictionary[numbers] = numberDictionary[numbers] + 1;
+            //         }
+            //     }
+            // }
+            // foreach(KeyValuePair<int, int> kvp in numberDictionary)
+            // {
+            //     Console.WriteLine("{0} repeats {1} times", kvp.Key, kvp.Value);
             
 
             Console.WriteLine("=======================================");
             Console.WriteLine("Using Lists - Exercise Three");
+
+            List<string> words = new List<string>();
+            bool stop= false;
+                Console.WriteLine("Input 5 different words!");
+                while (!stop)
+                {   
+                    string word = Console.ReadLine();
+                    if (word == "stop")
+                    {
+                        stop = true;
+                    }
+                    words.Add(word);
+                }
+            words.Reverse();
+
+            Console.WriteLine();
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+            }
+
+
+
 
         }
     }
